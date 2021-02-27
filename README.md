@@ -219,5 +219,5 @@ Todos los cambios en las versiones de esta biblioteca están listados en [CHANGE
 
 ## Autor
 
-Tenantz100 (**gitlab**: [@nelsonstos](https://gitlab.com/nelsonstos), **github**: [@AJRDRGZ](https://github.com/nelsonstos))
+Tenantz100 (**gitlab**: [@nelsonstos](https://gitlab.com/nelsonstos), **github**: [@nelsonstos](https://github.com/nelsonstos))
  
