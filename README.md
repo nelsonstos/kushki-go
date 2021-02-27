@@ -1,15 +1,15 @@
-# Culqi Go
+# Kushki Go
 
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/culqi/culqi-go)
-[![Code Climate](https://codeclimate.com/github/culqi/culqi-go/badges/gpa.svg)](https://codeclimate.com/github/culqi/culqi-go)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/nelsonstos/kushki-go)
+[![Code Climate](https://codeclimate.com/github/culqi/culqi-go/badges/gpa.svg)](https://codeclimate.com/github/nelsonstos/kushki-go)
 
 ![](http://i.imgur.com/Djajj50.png)
 
 
-Biblioteca de CULQI para el lenguaje Go (golang), pagos simples en tu sitio web. Consume el Culqi API.
+Biblioteca de KUSHKI para el lenguaje Go (golang), pagos simples en tu sitio web. Consume el Kushki API.
 
-| Versión actual| Culqi API|
+| Versión actual| Kushki API|
 |----|----|
 | 0.1.0 (09-01-2017) |v2 (ir a referencia)|
 
@@ -18,7 +18,7 @@ Biblioteca de CULQI para el lenguaje Go (golang), pagos simples en tu sitio web.
 ## Requisitos
 
 - Go 1.6+
-- Credenciales de comercio en Culqi (1).
+- Credenciales de comercio en Kushki (1).
 
 ## Instalación
 
@@ -27,7 +27,7 @@ Biblioteca de CULQI para el lenguaje Go (golang), pagos simples en tu sitio web.
 
 
 ```bash
-go get github.com/culqi/culqi-go
+go get github.com/nelsonstos/kushki-go
 ```
 
 
@@ -36,16 +36,16 @@ go get github.com/culqi/culqi-go
 Clonar el repositorio o descargarse el código fuente.
 
 ```bash
-$ git clone git@github.com:culqi/culqi-go.git
+$ git clone git@github.com:nelsonstos/kushki-go.git
 ```
 
 ## Inicio rápido
 
-Importando culqi-go:
+Importando kushki-go:
 
 ```go
 import (    
-    culqi "github.com/culqi/culqi-go"
+    kushki "github.com/nelsonstos/kushki-go"
 )
 ```
 
@@ -54,7 +54,7 @@ Configurar credenciales.
 func main() {
 
   // 1. llaves
-  culqi.Key("pk_test_xxx", "sk_test_xxx")
+  kushki.Key("pk_test_xxx", "sk_test_xxx")
 }
 ```
 ### Crear un *token*
@@ -62,7 +62,7 @@ func main() {
 
 ```go
   // 2. Crear una instancia de token
-  tk := culqi.Token{
+  tk := kushki.Token{
     CardNumber:      "4111111111111111",
     Cvv:             "123",
     ExpirationMonth: "09",
@@ -82,7 +82,7 @@ func main() {
 
 ```go
   // 2. Crear una instancia de Cargo
-  c := culqi.Charge{
+  c := kushki.Charge{
     Amount:       10100, // Monto del cargo. Sin punto decimal Ejemplo: 100.00 serían 10000
     Capture:      true,
     CurrencyCode: "PEN",
@@ -104,7 +104,7 @@ func main() {
 
 ```go
   // 2. Crear una instancia de Cliente
-  c := culqi.Customer{
+  c := kushki.Customer{
     FirstName:   "Alejandro",
     LastName:    "Rodriguez",
     Email:       "test@aj.rdrgz",
@@ -127,7 +127,7 @@ func main() {
 
 ```go
   // 2. Crear una instancia de Tarjeta
-  c := culqi.Card{
+  c := kuhski.Card{
     CustomerID: "cus_test_XBpeiZRN49fZRofA",
     TokenID:    "tkn_test_m5YOT23kaGf8vCQy",
     Validate:   true,
@@ -146,7 +146,7 @@ func main() {
 
 ```go
   // 2. Crear una instancia de un Plan
-  p := culqi.Plan{
+  p := kushki.Plan{
     Name:          "Suscripción Premium",
     Amount:        3000, // Monto del plan a cobrar recurrentemente. Sin punto decimal Ejemplo: 30.00 serían 3000
     CurrencyCode:  "USD",
@@ -199,12 +199,12 @@ $ go test -v ./test/ -public_key=pk_test_xxx -secret_key=sk_test_xxx
 
 ## Documentación
 
-¿Necesitas más información para integrar `culqi-go`? La documentación completa se encuentra en https://www.culqi.com/docs/#/
+¿Necesitas más información para integrar `kushki-go`? La documentación completa se encuentra en https://www.kushkipagos.com/docs/#/
 
 
 ## Licencia
 
-El código fuente de `culqi-go` está distribuido bajo MIT License, revisar el archivo [LICENSE](LICENSE).
+El código fuente de `kushki-go` está distribuido bajo MIT License, revisar el archivo [LICENSE](LICENSE).
 
 
 ## Contribuir
@@ -219,6 +219,5 @@ Todos los cambios en las versiones de esta biblioteca están listados en [CHANGE
 
 ## Autor
 
-Alejandro Rodríguez (**gitlab**: [@AJRDRGZ](https://gitlab.com/AJRDRGZ), **github**: [@AJRDRGZ](https://github.com/AJRDRGZ))
-
-Brayan Cruces ([@brayancruces](https://github.com/brayancruces) - Team Culqi)  
+Tenantz100 (**gitlab**: [@nelsonstos](https://gitlab.com/nelsonstos), **github**: [@AJRDRGZ](https://github.com/nelsonstos))
+ 
